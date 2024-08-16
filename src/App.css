@@ -36,3 +36,53 @@
     transform: rotate(360deg);
   }
 }
+
+.weekly-forecast {
+  margin: 20px;
+}
+
+.forecast-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.forecast-table th,
+.forecast-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+.forecast-table th {
+  background-color: #f2f2f2;
+}
+
+.forecast-table img {
+  width: 30px;
+  height: 30px;
+}
+
+.forecast-sources {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.forecast-source {
+  width: 48%;
+}
+
+.forecast-days {
+  display: flex;
+  justify-content: space-between;
+}
+
+.forecast-day {
+  text-align: center;
+}
+
+.forecast-day img {
+  width: 50px;
+  height: 50px;
+}
