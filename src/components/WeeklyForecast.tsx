@@ -33,19 +33,12 @@ const WeeklyForecast: React.FC = () => {
     const fetchForecastData = async () => {
       try {
         setError(null);
-        const newDates = Array.from({length: 7}, (_, i) => {
-          const date = new Date();
-          date.setDate(date.getDate() + i);
-          return date.toLocaleDateString('ja-JP', { month: 'numeric', day: 'numeric', weekday: 'short' });
-        });
-        setDates(newDates);
-
-        // 実際のAPIが準備できたら、以下のコメントを解除してください
-        const response = await axios.get(`/api/weather?prefecture=${selectedPrefecture}`);
+        const prefecture = encodeURIComponent(selectedPrefecture);
+        const response = await axios.get(`/api/weather?prefecture=${prefecture}`);
         setForecastSources(response.data);
       } catch (error) {
         console.error('天気データの取得に失敗しました', error);
-        setError('天気データの取得に失敗しました。しばらくしてから再度お試しください。');
+        setError('データの取得に失敗しました');
       }
     };
 
