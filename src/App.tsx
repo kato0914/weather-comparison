@@ -5,7 +5,7 @@ import './App.css';
 
 const App: React.FC = () => {
   return (
-    <div className="App">
+    <div className="App" style={{ minHeight: '100vh', backgroundColor: '#f0f0f0' }}>
       <Header />
       <WeeklyForecast />
     </div>
