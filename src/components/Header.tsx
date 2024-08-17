@@ -3,7 +3,7 @@ import React from 'react';
 const Header: React.FC = () => {
   return (
     <header>
-      <h1>天気比較アプリ</h1>
+      <h1>天気予報アプリ</h1>
     </header>
   );
 };

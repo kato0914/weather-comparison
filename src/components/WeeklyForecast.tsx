@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import * as cheerio from 'cheerio';
 
 interface DayForecast {
   date: string;
@@ -41,6 +40,7 @@ const WeeklyForecast: React.FC = () => {
         });
         setDates(newDates);
 
+        // 実際のAPIが準備できたら、以下のコメントを解除してください
         const response = await axios.get(`/api/weather?prefecture=${selectedPrefecture}`);
         setForecastSources(response.data);
       } catch (error) {
